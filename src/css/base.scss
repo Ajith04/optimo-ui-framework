@@ -1,9 +1,8 @@
-@import 'variables.scss';
+@use './variables.scss' as *;
 
 body{
-    background-color: var(--body-bg);
-    color: var(--dark-color);
-    font-family: var(--font-family);
-    margin: 0;
-    padding: 0;
+    background-color: $body-bg;
+    font-family: $font-family;
+    margin: 5px;
+    padding: 5px;
 }
