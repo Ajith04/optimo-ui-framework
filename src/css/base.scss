@@ -1,0 +1,9 @@
+@import 'variables.scss';
+
+body{
+    background-color: var(--body-bg);
+    color: var(--dark-color);
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+}

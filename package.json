@@ -1,0 +1,22 @@
+{
+  "name": "optimo-ui-framework",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "sass src/css/optimo.scss dist/optimo.css --no-source-map",
+    "minify:css": "postcss dist/optimo.css --use autoprefixer cssnano -o dist/optimo.min.css",
+    "build:js": "uglifyjs src/js/optimo.js --compress --mangle -o dist/optimo.min.js"
+  },
+  "keywords": [],
+  "author": "Unicorn Connected Apps",
+  "license": "ISC",
+  "description": "An UI framework especially for Optimo",
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "cssnano": "^7.0.7",
+    "postcss-cli": "^11.0.1",
+    "sass": "^1.89.1",
+    "uglify-js": "^3.19.3"
+  }
+}
