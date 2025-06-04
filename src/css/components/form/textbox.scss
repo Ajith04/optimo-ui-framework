@@ -1,0 +1,55 @@
+@use '../../variables.scss' as *;
+
+.input-group {
+  position: relative;
+  margin: 1rem 0;
+  width: 100%;
+}
+
+.textbox {
+  font-size: 1rem;
+  padding: 0.8rem 0.5rem;
+  width: 100%;
+  border: 0.05rem solid $border-color;
+  border-radius: 0.3rem;
+  outline: none;
+  background: $light-color, #fff;
+  transition: all 0.2s ease-in-out;
+  
+}
+
+
+.floating-label, label {
+  position: absolute;
+  top: 50%;
+  left: 0.5rem;
+  font-size: 1rem;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: all 0.2s ease-in-out;
+  
+}
+
+
+.textbox:focus + label,
+.textbox:not(:placeholder-shown) + label {
+  top: 0;
+  font-size: 0.8rem;
+  position: absolute;
+  top: -20%;
+}
+
+.textbox:focus {
+  border-color: $primary-color;
+  box-shadow: 0.05rem 0.05rem 0.2rem $primary-color;
+  
+}
+
+
+.textbox.error {
+  border-color: $danger-color, #ff0000;
+}
+
+.textbox.error + label {
+  color: $danger-color, #ff0000;
+}

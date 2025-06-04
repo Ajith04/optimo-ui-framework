@@ -1,0 +1,36 @@
+$h-font-family: 'Gadugi';
+
+
+h1{
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1.2;   
+    margin-bottom: 1rem;
+    font-family: $h-font-family;
+}
+
+h2{
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1.3;
+    margin-bottom: 0.75rem;
+    font-family: $h-font-family;
+}
+
+h3{
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+    font-family: $h-font-family;
+}
+
+
+// disabling h4, h5, h6 styles
+h4, h5, h6 {
+  font-size: inherit;
+  font-weight: normal;
+  margin: 0;
+  line-height: inherit;
+  display: inline;
+}
