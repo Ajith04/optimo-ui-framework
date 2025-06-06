@@ -6,7 +6,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:css": "sass src/css/optimo.scss dist/optimo.css --no-source-map",
     "minify:css": "postcss dist/optimo.css --use autoprefixer cssnano -o dist/optimo.min.css",
-    "build:js": "uglifyjs src/js/optimo.js --compress --mangle -o dist/optimo.min.js"
+    "build:js": "uglifyjs src/js/optimo.js --compress --mangle -o dist/optimo.min.js",
+    "watch:css": "sass --watch src/css/optimo.scss:dist/optimo.css --no-source-map"
   },
   "keywords": [],
   "author": "Unicorn Connected Apps",

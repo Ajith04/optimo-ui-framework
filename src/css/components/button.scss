@@ -1,18 +1,72 @@
 @use '../variables.scss' as *;
+@use '../base.scss' as *;
+@use 'sass:color';
 
-.btn {
-  display: inline-block;
-  background-color: $primary-color;
-  text-align: center;
-  text-decoration: none;
-  border: none;
-  border-radius: 5px;
-  padding: 5px 10px;
-  cursor: pointer;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
-  
+@mixin button-style($bg, $hover-bg, $color: $opt-light-color) {
+  background-color: $bg;
+  color: $color;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+      background-color: $hover-bg;
+  }
+
+  &:focus-visible {
+    outline: 2px solid color.adjust($color: $hover-bg, $lightness: 20%);
+    outline-offset: 2px;
+  }
+}
+.opt-btn {
+    border: none;
+    font-size: 1rem;
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.25rem;
+    margin: 0.2rem;
+    cursor: pointer;
+    font-weight: 500;
+    display: inline-block;
+    line-height: 1.5;
+    transition: all 0.2s ease-in-out;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    text-transform: capitalize;
 }
 
-.btn:hover {
-  color: $light-color;
+.opt-btn-sm {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  border-radius: 0.2rem;
 }
+
+.opt-btn-md {
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+}
+
+.opt-btn-lg {
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  border-radius: 0.3rem;
+}
+
+.opt-btn-primary {
+    @include button-style($opt-primary-color, $opt-dark-primary-color);
+}
+.opt-btn-secondary {
+    @include button-style($opt-secondary-color, $opt-dark-secondary-color);
+}
+.opt-btn-danger {
+    @include button-style($opt-danger-color, $opt-dark-danger-color )
+}
+.opt-btn-success{
+    @include button-style($opt-success-color, $opt-dark-success-color )
+}
+.opt-btn-process{
+    @include button-style($opt-info-color, $opt-dark-info-color )
+}
+
