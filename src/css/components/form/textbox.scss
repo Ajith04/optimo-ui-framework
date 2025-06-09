@@ -10,10 +10,10 @@
   font-size: 1rem;
   padding: 0.8rem 0.5rem;
   width: 100%;
-  border: 0.05rem solid $border-color;
+  border: 0.05rem solid $opt-dark-secondary-color;
   border-radius: 0.3rem;
   outline: none;
-  background: $light-color, #fff;
+  background: $opt-primary-color, #fff;
   transition: all 0.2s ease-in-out;
   
 }
@@ -40,16 +40,16 @@
 }
 
 .textbox:focus {
-  border-color: $primary-color;
-  box-shadow: 0.05rem 0.05rem 0.2rem $primary-color;
+  border-color: $opt-primary-color;
+  box-shadow: 0.05rem 0.05rem 0.2rem $opt-primary-color;
   
 }
 
 
 .textbox.error {
-  border-color: $danger-color, #ff0000;
+  border-color: $opt-danger-color, #ff0000;
 }
 
 .textbox.error + label {
-  color: $danger-color, #ff0000;
+  color: $opt-danger-color, #ff0000;
 }

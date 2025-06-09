@@ -1,24 +1,111 @@
-.btn {
-  display: inline-block;
-  background-color: #F9C259;
-  text-align: center;
-  text-decoration: none;
-  border: none;
-  border-radius: 5px;
-  padding: 5px 10px;
-  cursor: pointer;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
-}
-
-.btn:hover {
-  color: #F5F5F5;
-}
-
 body {
-  background-color: #f5f5f5;
+  background-color: #E8EDF0;
   font-family: "Roboto", sans-serif;
   margin: 1rem;
   padding: 1rem;
+}
+
+.opt-btn {
+  border: none;
+  font-size: 1rem;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.25rem;
+  margin: 0.2rem;
+  cursor: pointer;
+  font-weight: 500;
+  display: inline-block;
+  line-height: 1.5;
+  transition: all 0.2s ease-in-out;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  text-transform: capitalize;
+}
+
+.opt-btn-sm {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  border-radius: 0.2rem;
+}
+
+.opt-btn-md {
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+}
+
+.opt-btn-lg {
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  border-radius: 0.3rem;
+}
+
+.opt-btn-primary {
+  background-color: #F9C259;
+  color: #F5F5F5;
+  transition: background-color 0.3s ease;
+}
+.opt-btn-primary:hover {
+  background-color: #E49808;
+}
+.opt-btn-primary:focus-visible {
+  outline: 2px solid rgb(249.1694915254, 193.7796610169, 88.8305084746);
+  outline-offset: 2px;
+}
+
+.opt-btn-secondary {
+  background-color: #91A0AD;
+  color: #F5F5F5;
+  transition: background-color 0.3s ease;
+}
+.opt-btn-secondary:hover {
+  background-color: #616161;
+}
+.opt-btn-secondary:focus-visible {
+  outline: 2px solid #949494;
+  outline-offset: 2px;
+}
+
+.opt-btn-danger {
+  background-color: #f44336;
+  color: #F5F5F5;
+  transition: background-color 0.3s ease;
+}
+.opt-btn-danger:hover {
+  background-color: #FF4343;
+}
+.opt-btn-danger:focus-visible {
+  outline: 2px solid #ffa9a9;
+  outline-offset: 2px;
+}
+
+.opt-btn-success {
+  background-color: #17A2B8;
+  color: #F5F5F5;
+  transition: background-color 0.3s ease;
+}
+.opt-btn-success:hover {
+  background-color: #138496;
+}
+.opt-btn-success:focus-visible {
+  outline: 2px solid rgb(42.8698224852, 202.674556213, 228.1301775148);
+  outline-offset: 2px;
+}
+
+.opt-btn-process {
+  background-color: #4BB3FA;
+  color: #F5F5F5;
+  transition: background-color 0.3s ease;
+}
+.opt-btn-process:hover {
+  background-color: #448AFF;
+}
+.opt-btn-process:focus-visible {
+  outline: 2px solid rgb(170, 201.8181818182, 255);
+  outline-offset: 2px;
 }
 
 h1 {
@@ -66,7 +153,7 @@ h4, h5, h6 {
   border: 0.05rem solid #616161;
   border-radius: 0.3rem;
   outline: none;
-  background: #F5F5F5, #fff;
+  background: #F9C259, #fff;
   transition: all 0.2s ease-in-out;
 }
 
