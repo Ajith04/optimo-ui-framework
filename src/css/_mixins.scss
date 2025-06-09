@@ -1,0 +1,43 @@
+@use 'variables.scss' as *;
+@use 'sass:color';
+
+// for CRUD buttons
+@mixin button-style($bg, $hover-bg, $color: $opt-light-color) {
+  background-color: $bg;
+  color: $color;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+      background-color: $hover-bg;
+  }
+
+  &:focus-visible {
+    outline: 2px solid color.adjust($color: $hover-bg, $lightness: 20%);
+    outline-offset: 2px;
+  }
+}
+
+// for upload & download buttons
+@mixin file-button($icon){
+    @include button-style($opt-file-color, $opt-dark-file-color);
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 1.2rem 3rem;
+    background-image: url($icon);
+}
+
+// for headings
+@mixin headings($font-size, $line-height, $margin-bottom) {
+  font-size: $font-size;
+  font-weight: bold;
+  font-family: Gadugi;
+}
+
+// for ignoring headings
+@mixin ignore-headings() {
+  font-size: inherit;
+  font-weight: normal;
+  margin: 0;
+  line-height: inherit;
+  display: inline;
+}

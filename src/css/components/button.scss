@@ -1,21 +1,7 @@
-@use '../variables.scss' as *;
-@use 'sass:color';
+@use '../_variables.scss' as *;
+@use '../_mixins.scss' as *;
 
-@mixin button-style($bg, $hover-bg, $color: $opt-light-color) {
-  background-color: $bg;
-  color: $color;
-  transition: background-color 0.3s ease;
-
-  &:hover {
-      background-color: $hover-bg;
-  }
-
-  &:focus-visible {
-    outline: 2px solid color.adjust($color: $hover-bg, $lightness: 20%);
-    outline-offset: 2px;
-  }
-}
-
+// general button styles
 .opt-btn {
     border: none;
     font-size: 1rem;
@@ -33,27 +19,7 @@
     text-transform: capitalize;
 }
 
-// .opt-btn-sm {
-//   padding: 0.25rem 0.5rem;
-//   font-size: 0.875rem;
-//   line-height: 1.5;
-//   border-radius: 0.2rem;
-// }
-
-// .opt-btn-md {
-//   padding: 0.375rem 0.75rem;
-//   font-size: 1rem;
-//   line-height: 1.5;
-//   border-radius: 0.25rem;
-// }
-
-// .opt-btn-lg {
-//   padding: 0.5rem 1rem;
-//   font-size: 1.25rem;
-//   line-height: 1.5;
-//   border-radius: 0.3rem;
-// }
-
+// CRUD buttons
 .opt-btn-primary {
     @include button-style($opt-primary-color, $opt-dark-primary-color);
 }
@@ -74,19 +40,12 @@
     @include button-style($opt-danger-color, $opt-dark-danger-color )
 }
 
+// File upload & download buttons
 .opt-btn-upload {
-    @include button-style($opt-file-color, $opt-dark-file-color);
-    background-image: url('assets/download-icon.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 1rem
+   @include file-button('assets/upload-icon.svg');
 }
 
 .opt-btn-download {
-    @include button-style($opt-file-color, $opt-dark-file-color);
-    background-image: url('assets/upload-icon.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 1rem;
+   @include file-button('assets/download-icon.svg');
 }
 

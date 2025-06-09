@@ -1,36 +1,20 @@
-$h-font-family: 'Gadugi';
+@use '../_mixins.scss' as *;
 
-
+// Headings styles
 h1{
-    font-size: 2.5rem;
-    font-weight: bold;
-    line-height: 1.2;   
-    margin-bottom: 1rem;
-    font-family: $h-font-family;
+    @include headings(2.5rem, 1.2, 1rem);
 }
 
 h2{
-    font-size: 2rem;
-    font-weight: bold;
-    line-height: 1.3;
-    margin-bottom: 0.75rem;
-    font-family: $h-font-family;
+    @include headings(2rem, 1.3, 0.75rem);
 }
 
 h3{
-    font-size: 1.5rem;
-    font-weight: bold;
-    line-height: 1.4;
-    margin-bottom: 0.5rem;
-    font-family: $h-font-family;
+    @include headings(1.5rem, 1.4, 0.5rem);
 }
 
 
 // disabling h4, h5, h6 styles
 h4, h5, h6 {
-  font-size: inherit;
-  font-weight: normal;
-  margin: 0;
-  line-height: inherit;
-  display: inline;
+  @include ignore-headings();
 }

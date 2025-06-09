@@ -1,5 +1,6 @@
 @use './variables.scss' as *;
 
+// Base styles for the entire application
 body{
     background-color: $opt-body-bg;
     font-family: $font-family;

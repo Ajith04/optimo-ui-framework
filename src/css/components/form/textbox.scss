@@ -1,11 +1,13 @@
-@use '../../variables.scss' as *;
+@use '../../_variables.scss' as *;
 
+// Textbox group
 .input-group {
   position: relative;
   margin: 2rem 0;
   width: 100%;
 }
 
+// Textbox styles
 .textbox {
   font-size: 1rem;
   padding: 0.8rem 0.8rem;
@@ -18,7 +20,7 @@
   
 }
 
-
+// Floating label styles
 .floating-label, label {
   position: absolute;
   top: 50%;
@@ -30,7 +32,7 @@
   
 }
 
-
+// Floating label on focus or not empty
 .textbox:focus + label,
 .textbox:not(:placeholder-shown) + label {
   top: 0;
@@ -39,17 +41,19 @@
   top: -20%;
 }
 
+// Textbox focus styles
 .textbox:focus {
   border-color: $opt-primary-color;
   box-shadow: 0.05rem 0.05rem 0.2rem $opt-primary-color;
   
 }
 
-
+// Textbox disabled styles
 .textbox.error {
   border-color: $opt-danger-color, #ff0000;
 }
 
+// Floating label error styles
 .textbox.error + label {
   color: $opt-danger-color, #ff0000;
 }
