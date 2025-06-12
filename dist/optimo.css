@@ -1,8 +1,8 @@
 .opt-btn {
   border: none;
-  font-size: 1rem;
-  padding: 0.375rem 0.75rem;
-  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  border-radius: 0.2rem;
   margin: 0.2rem;
   cursor: pointer;
   font-weight: 500;
@@ -117,8 +117,11 @@
 body {
   background-color: #E8EDF0;
   font-family: "Roboto", sans-serif;
-  margin: 1rem;
-  padding: 1rem;
+}
+
+* {
+  margin: 0rem;
+  padding: 0rem;
 }
 
 h1 {
@@ -193,4 +196,126 @@ h4, h5, h6 {
 
 .textbox.error + label {
   color: #f44336, #ff0000;
+}
+
+.opt-container {
+  width: 100%;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 576px) {
+  .opt-container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .opt-container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .opt-container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .opt-container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .opt-container {
+    max-width: 1320px;
+  }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+}
+.modal.active {
+  display: flex;
+}
+.modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.modal__content {
+  position: relative;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  z-index: 1;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.3s ease-out;
+}
+.modal__close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.modal__title {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+.modal__body {
+  font-size: 1rem;
+  color: #333;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.modal__body {
+  padding: 10px 0px;
+}
+
+.sidebar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  width: 80%;
+  color: #F9C259;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: transparent;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s;
+}
+
+.nav-link:hover {
+  background-color: #eda216; /* Slight hover effect */
+}
+
+.nav-link.active {
+  background-color: #db8e00; /* Active background */
+  color: #ffffff; /* Active text color */
 }

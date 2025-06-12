@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../dist/optimo.css">
+</head>
+
+<body>
+    <nav style="height: 100vh; width: 220px; background-color: #000000; padding: 0.5rem; display: flex; flex-direction: column; align-items: flex-start; position: fixed; top: 0; left: 0;">
+        <div style="margin-bottom: 2rem;">
+            <img src="../dist/assets/images/logo.png" alt="Logo" height="50px">
+        </div>
+        <ul class="sidebar-nav">
+            <li><a href="./index.html" class="nav-link">Home</a></li>
+            <li><a href="./button.html" class="nav-link">Buttons Component</a></li>
+            <li><a href="./modal.html" class="nav-link">Modals Component</a></li>
+          </ul>
+    </nav>
+    <div style="margin-left: 220px; padding: 1rem;">
+        <div class="opt-container">
+            <h3 >Optimo Center Modal</h3>
+        </div>
+       <div class="opt-container">
+         <!-- Trigger Button 1-->
+         <button id="openModalBtn" class="opt-btn opt-btn-add opt-btn-sm">Open Centre Modal</button>
+    
+         <!-- Modal 1-->
+         <div class="modal" id="myModal">
+             <div class="modal__backdrop"></div>
+             <div class="modal__content">
+                 <span class="modal__close closeModalBtn">&times;</span>
+                 <h2 class="modal__title">Modal Title</h2>
+                 <p class="modal__body" >This is a simple modal window with SCSS styling.</p>
+                 <div style="display: flex;">
+                     <button class="opt-btn opt-btn-delete">delete</button>
+                     <button  class="opt-btn opt-btn-secondary closeModalBtn">cancel</button>
+                 </div>
+             </div>
+         </div>
+     
+       </div>
+      </div>
+      
+
+   <script src="../dist/optimo.min.js"></script>
+</body>
+
+</html>
