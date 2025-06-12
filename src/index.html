@@ -2,46 +2,70 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Optimo UI</title>
-    <link rel="stylesheet" href="../dist/optimo.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Optimo UI</title>
+  <link rel="stylesheet" href="../dist/optimo.css">
+  <link rel="stylesheet" href="../manual-css/style.css">
 </head>
 
 <body>
 
-    <!-- This HTML file is to test newly created classes in this Optimo uI framework -->
-
-    <!-- Check your class names here -->
-
-    <!-- Start -->
-     <!-- Headings -->
-    <h1>Optimo UI Framework</h1>
-    <h2>Optimo UI Framework</h2>
-    <h3>Optimo UI Framework</h3>
-
-    <!-- Buttons -->
-    <button class="opt-btn opt-btn-primary">Venues</button>
-    <button class="opt-btn opt-btn-secondary">View</button>
-    <button class="opt-btn opt-btn-add">Add New</button>
-    <button class="opt-btn opt-btn-edit">Edit</button>
-    <button class="opt-btn opt-btn-delete">Delete</button>
-    <button class="opt-btn opt-btn-upload"></button>
-    <button class="opt-btn opt-btn-download"></button>
-
-
-
-    <!-- Textbox -->
-    <div class="input-group">
-    <input type="text" id="floatingText" class="textbox" placeholder=" " />
-    <label for="floatingText" class="floating-label label">Email</label>
+  <nav
+    style="height: 100vh; width: 220px; background-color: #000000; padding: 0.5rem; display: flex; flex-direction: column; align-items: flex-start; position: fixed; top: 0; left: 0;">
+    <div style="margin-bottom: 2rem;">
+      <img src="../dist/assets/images/logo.png" alt="Logo" height="50px">
     </div>
+    <ul class="sidebar-nav">
+      <li><a href="./index.html" class="nav-link">Home</a></li>
+      <li><a href="./button.html" class="nav-link">Buttons Component</a></li>
+      <li><a href="./modal.html" class="nav-link">Modals Component</a></li>
+    </ul>
+  </nav>
+  <div style="margin-left: 220px; padding: 2rem;">
+    <header class="header">
+      <div style="display: flex; justify-content: center;">
+        <img src="../dist/assets/loadset.gif" alt="" style="position: absolute; left: 540px;">
+        <div>
+          <h1><span style="color: rgb(255, 231, 20);">Optimo</span> UI FrameWork</h1>
+          <p class="tagline">Minimal, modern, and optimized components for web apps.</p>
+
+        </div>
+      </div>
+      <div style="display: flex; justify-content: center;">
+        <img src="../dist/assets/home.avif" alt="" height="420px">
+      </div>
+      <div style="display: flex; justify-content: center;">
+        <div class="opt-container">
+          <!-- Trigger Button 1-->
+          <button id="openModalBtn" class="opt-btn opt-btn-edit opt-btn-sm">How To Import Our FrameWork </button>
+
+          <!-- Modal 1-->
+          <div class="modal" id="myModal">
+            <div class="modal__backdrop"></div>
+            <div class="modal__content ">
+              <span class="modal__close closeModalBtn">&times;</span>
+              <h2 style="text-align: start;color:#59a4f9;">Getting Started</h2>
+              <p style="text-align: start; padding:10px 0px;">Use Optimo to rapidly build UI elements with consistent
+                styling.</p>
+              <p style="text-align: start; " class="pre"> npm install optimo-ui</p>
+
+              <div style="display: flex;justify-content: end;">
+                <button class="opt-btn opt-btn-secondary closeModalBtn">cancel</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    </header>
 
 
+    <footer class="footer">
+      <p>&copy; 2025 Optimo UI</p>
+    </footer>
+  </div>
 
-    <!-- End -->
-
-    <script src="../dist/optimo.min.js"></script>
+  <script src="../dist/optimo.min.js"></script>
 </body>
 
 </html>
